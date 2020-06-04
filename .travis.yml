@@ -1,0 +1,21 @@
+language: go
+go:
+- 1.14.x
+os:
+- linux
+- osx
+- windows
+sudo: false
+install:
+- 
+script:
+- go build
+- go test
+deploy:
+  provider: releases
+  api_key:
+    secure: O+dTKBbjYeWOwr+y7wZ+VadPTLJ3s1J1wc1QTCN0dpq7jGrzLT4t5m+zRtLXBV0Gg9EAh1k5Mz/WcXYqX2nw1qa/LjfsZ647S2tVW74qb6c+UdZLIk2bqhGFP5R/p9JnHZPKoF53tC3clQNPzD23Tkf7QJOGuUtRhCI9jYXIC8fvLuzvAfAI43YSzDrwIy5rN5uzInalC4hlOEYidkIUnEGA/6LWuql1tAiD+C39DY5YiU6cP3Sh2MMBf5OLfloEmbW6c45C56JZ66ypxlJIqL4rM884MX1LbLypPV3L7BhL9Knt1i2DZApD1AWjMFTUyt4o1Vk1rzZWXJpOdJOT44hWWoBzYUVhg9CV4y7c8MhrXY84AwuF/RA3IdYAELZLWn/wIeTi7oWwkxFXJBTJ5qqQo3x+jmfaOgiqrdvs9ZTE4xZVA+CEDbc58W1lwKdJJntLmxCvGwF1LtMltxY0YzNNJ3sp9PZafSqxRRdo1+02/YrckaMHwQ6QVYegeDFW/29T7KWqUIUVtIa3g45hgrOIood2GlcV5i0rEI1SRLf4Do0CveSDFRrV3JHky0h3k/bR8FSKTv12nEn5v3a29eTrtQo4jpj334PXsSNirFbO5HCF/O4OPM1H05T1AscgxjZx7Ee5Jj3nx7QtMBFo290WMuJDDrMWjOmrdtwPA6Y=
+  file: "*"
+  on:
+    repo: 0xsuid/shiori
+  skip_cleanup: 'true'
