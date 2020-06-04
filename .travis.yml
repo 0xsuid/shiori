@@ -1,0 +1,13 @@
+language: go
+go:
+- 1.14.x
+os:
+- linux
+- osx
+- windows
+sudo: false
+install:
+- 
+script:
+- go build
+- go test
